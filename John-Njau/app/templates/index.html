@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block body %}
+<!-- styles block -->
+{% block styles %}
+<link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+{%endblock%}
+<body>
+  <div class="main">
+    <h1>My Movies</h1>
+    <p>The best movie website in the world.</p>
+    <h3>Hot Movies</h3>
+  </div>
+  {% for movie in movies %}
+  <ul>
+    <li class="title">{{movie['title']}}</li>
+    <li><img src="" alt="" /><span>Overview:</span> <br>{{movie["overview"]}}</li>
+    <li><span>Released On:</span> {{movie['release_date']}}</li>
+    <li><span>Votes:</span> {{movie['vote_count']}}</li>
+  </ul>
+</body>
+
+{% endfor %} {% endblock %}
