@@ -19,5 +19,6 @@ def index():
     req_read = req_open.read()
     req_json = json.loads(req_read)
     movies = req_json['results']
+    # img = 'https://image.tmdb.org/t/p/w500/'+ poster_path
 
     return render_template('index.html', title=title, movies=movies)

@@ -12,6 +12,7 @@
   {% for movie in movies %}
   <ul>
     <li class="title">{{movie['title']}}</li>
+    <li> <img src="{{'https://image.tmdb.org/t/p/w500/'+ movie['poster_path']}}" alt=""> </li>
     <li><img src="" alt="" /><span>Overview:</span> <br>{{movie["overview"]}}</li>
     <li><span>Released On:</span> {{movie['release_date']}}</li>
     <li><span>Votes:</span> {{movie['vote_count']}}</li>

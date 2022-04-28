@@ -35,4 +35,4 @@ print(req_json["results"][8]['release_date'])
 print(req_json["results"][8]['vote_count'])
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=True)
+    app.run(port=8085, debug=True)
